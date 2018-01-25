@@ -1,35 +1,24 @@
-public class Laptop{
+public class Laptop extends CPU{
 
     private String maker;
-    private double cpuSpeed;
     private int version;
     private boolean used;
 
-    public Laptop(String maker, double cpuSpeed, int version, boolean used) {
-        this.maker = maker;
-        this.cpuSpeed = cpuSpeed;
-        this.version = version;
-        this.used = used;
+    public Laptop(double mhz, String cpuMaker,String maker,int version,boolean used) {
+        super(mhz, cpuMaker);
+        this.maker=maker;
+        this.version=version;
+        this.used=used;
     }
 
-    public Laptop() {
-    }
-
-    public String getMaker() {
+    public String getCpuMaker() {
         return maker;
     }
 
-    public void setMaker(String maker) {
-        this.maker = maker;
+    public void setCpuMaker(String cpuMaker) {
+        this.maker = cpuMaker;
     }
 
-    public double getCpuSpeed() {
-        return cpuSpeed;
-    }
-
-    public void setCpuSpeed(double cpuSpeed) {
-        this.cpuSpeed = cpuSpeed;
-    }
 
     public int getVersion() {
         return version;
